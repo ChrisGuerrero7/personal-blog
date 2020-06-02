@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0; /*header pegado hacia arriba*/
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px black; /*Sombra*/
+    z-index: 2; /*header encima de todo*/
+}
+
+.header-content{
+    max-width: 1200px; /*header mantenga el mismo margen*/
+    margin: auto;
+    display: flex; 
+    justify-content: space-between; /*Contenido al extremo*/
+}
+
+.logo{
+    /*Colocamos el mismo tamaño que su padre header*/
+    height: 80px;
+    
+    /*Estos atributoa trabajan siempre con flexbox*/
+    display: flex;
+    justify-content: center; /*Centramos de manera horizontal*/
+    align-items: center; /*Centramos de manera vertical*/
+}
+
+.logo h1 b{
+    color: #2e86de;
+}
+
+.menu{
+    /*Colocamos el mismo tamaño que su padre header*/
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none; /*Eliminamos los puntos*/
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0 20px;
+
+    /*Estos atributos trabajan siempre con flexbox*/
+    display: flex;
+    justify-content: center; /*Centramos de manera horizontal*/
+    align-items: center; /*Centramos de manera vertical*/
+
+    position: relative;
+}
+
+/*Añadimos la barra arriba de cada opcion del menu*/
+.menu-select:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #2e86de;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: #2e86de;
+}
+
+.menu .text-menu-select{
+    color: #2e86de;
+}
